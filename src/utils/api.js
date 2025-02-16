@@ -1,7 +1,8 @@
 import axios from "axios";
 
-// const URL = "http://localhost:3000";
-const URL = "https://back-end-jornada-production.up.railway.app";
+
+const {API_PREFIX} = process.env
+const URL = "http://localhost:3001/api"
 
 export const getArtists = async () => {
   const response = await axios.get(`${URL}/artists`);
